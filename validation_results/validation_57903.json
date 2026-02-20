@@ -1,0 +1,9 @@
+{
+  "id": "57903",
+  "title": "[M-01] Duplicate Pool in Router Path Can Cause Transaction Failure",
+  "summary": "\nThe report describes a bug in the `_swap()` function of the `MobiusRouter` contract. This bug occurs when the `poolPath` contains duplicate pool addresses, causing the transaction to fail. This limitation affects the efficiency of constructing swap paths. The team has recommended adding a check to prevent duplicate pools or removing the `conditionallySingleCallPerTransaction()` modifier from `pool.swap()`. The team has confirmed that the bug has been fixed.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet does not show any handling or checks for duplicate pool addresses in the `_swap()` function, which is the main concern mentioned in the summary."
+  }
+}

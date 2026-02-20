@@ -1,0 +1,9 @@
+{
+  "id": "63051",
+  "title": "M-5: `ZappingProxy` cannot receive ETH refunds resulting in failed zaps",
+  "summary": "\nThe bug report is about an issue found in the `ZappingProxy` contract, which is used to forward `msg.value` to routers. However, the contract does not have a payable receive or fallback function, which causes router ETH refunds to revert. This results in failed zaps for ETH paths that expect refunds. The root cause of this issue is that when `zapProxy` is called with `tokenIn == CHAIN_COIN` and a positive `msg.value`, it forwards ETH to the router, but there is no function in the contract to handle refunds. This can lead to the entire zap failing. To fix this issue, a payable ETH acceptance path needs to be added to the contract. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

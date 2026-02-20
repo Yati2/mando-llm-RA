@@ -1,0 +1,9 @@
+{
+  "id": "56954",
+  "title": "H-5: Attacker captures unclaimed fees by timing deposit with range re-entry and price manipulation",
+  "summary": "\nThis bug report discusses an issue with the Burve platform, where an attacker can exploit the system to capture a disproportionate share of accumulated fees. This occurs when the Burve ranges are out of bounds in the underlying Uniswap V3 pool and the collected fees do not meet the minimum liquidity criteria. The attacker can deposit into Burve just before the market re-enters the ranges, then withdraw shortly after, effectively collecting a larger share of the fees. This is due to a flaw in the `collectAndCalcCompound()` function, which only adds liquidity when both tokens are usable. This creates a situation where one token is \"stuck\" in the contract until the market moves back into the Burve-defined ranges. The report suggests adding a small weighted big range to mitigate this issue. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

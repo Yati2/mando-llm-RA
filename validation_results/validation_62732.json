@@ -1,0 +1,9 @@
+{
+  "id": "62732",
+  "title": "M-9: The rebalancing system is broken when everclear bridge contract is used",
+  "summary": "\nSummary:\n\nThe bug report discusses an issue with the EverclearBridge contract in the Malda Protocol. The sendMsg function in the contract only approves the transfer amount for the FeeAdapter, but the FeeAdapter attempts to pull both the amount and the fee from the bridge contract. This results in a revert due to insufficient allowance, causing cross-chain rebalancing to fail. The root cause is a mismatch between the approved amount and the actual amount required by the FeeAdapter. This can be fixed by updating the allowance logic in the EverclearBridge contract. The impact of this bug is that all cross-chain rebalancing operations using EverclearBridge will fail. The protocol team has fixed this issue in a recent PR. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "57873",
+  "title": "[M-02] Refund Block via `extendTime()` Function in `DaosLive`",
+  "summary": "\nThe DaosLive contract has a bug that allows the owner to block refunds indefinitely by repeatedly extending the `endTime` parameter. This means that users who contribute to the contract may not be able to claim refunds if the project does not finalize. This introduces a risk of centralization and potential malicious actions by the owner. The affected code can be found in the `DaosLive.sol` file. The impact of this bug is that refunds can be delayed indefinitely and the owner has too much control over the refund timeline. The recommendation is to impose a cap on the amount of time `endTime` can be extended and require governance approval for any extensions beyond a certain threshold. The team has fixed the bug.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

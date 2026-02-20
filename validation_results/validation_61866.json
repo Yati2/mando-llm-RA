@@ -1,0 +1,9 @@
+{
+  "id": "61866",
+  "title": "Potential Loss of Wrapped BTC",
+  "summary": "\nThe `BitVMBridge` contract has a function called `burn` that allows users to initiate the PEG-OUT process for wrapped BTC tokens. However, the parameter for the destination address is not being validated, which can lead to user errors and potential loss of funds. There is also no way for users to retrieve their lost funds in case of an invalid address. The bug has been fixed in a recent update. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

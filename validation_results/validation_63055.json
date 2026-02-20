@@ -1,0 +1,9 @@
+{
+  "id": "63055",
+  "title": "M-9: Users can steal accumulated rewards when `totalCollateral` becomes zero due to incomplete state updates",
+  "summary": "\nThis bug report discusses an issue found by multiple users in the USG Tangent Judging contract. The bug allows attackers to claim rewards that were previously earned by other users. The root cause of the bug is that when the total collateral becomes zero, the function responsible for updating rewards skips updating a crucial variable. This leaves the variable at 0 while another variable retains previously accumulated values, allowing attackers to claim unearned rewards. The impact of this bug includes fund loss, depletion of the reward pool, and inability for legitimate users to claim their earned rewards. The report also includes a mitigation solution to fix the bug.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

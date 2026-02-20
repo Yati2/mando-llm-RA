@@ -1,0 +1,9 @@
+{
+  "id": "63705",
+  "title": "M-5: Lack of Emergency Market Invalidation Mechanism",
+  "summary": "\nThe report discusses a bug in the 2025-10-index-fun-order-book-contest-judging project, where the Protocol Owner or Emergency Resolver is unable to invalidate an active market. This can lead to a permanent loss of collateral for all market participants if the market outcome cannot be determined due to factors such as source API failure or real-world event cancellation. The root cause of the bug is identified as a design choice that does not account for scenarios where a valid outcome cannot be determined. The bug can be exploited by canceling a real-world event associated with the market, causing the market to remain unresolved and resulting in a loss of all locked collateral for market participants. The report suggests adding a mechanism to mark a market as \"invalid\" or \"canceled\" and allowing users to reclaim their collateral in such cases. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

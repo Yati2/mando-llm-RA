@@ -1,0 +1,9 @@
+{
+  "id": "64389",
+  "title": "Token value locks done as part of issuance restrict subsequently transferred unlocked tokens after negative rebasing",
+  "summary": "\nThe bug report explains that when a token is issued, there are two types of locks that can be put in place: share value based lock and token value based lock. However, there is a problem when negative rebasing occurs and an investor transfers unlocked tokens to another investor. The token value lock from the original issuance restricts the transfer of the unlocked tokens. A proof of concept is provided to show this problem and a recommended solution is to convert the lock system to store all lock amounts in shares rather than tokens. The issue has been acknowledged and can be managed through operational procedures.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

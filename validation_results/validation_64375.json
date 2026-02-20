@@ -1,0 +1,9 @@
+{
+  "id": "64375",
+  "title": "Country updates is not reducing from the storage the prev country",
+  "summary": "\nThe bug report describes an issue in the `adjustInvestorCountsAfterCountryChange` function in the `ComplianceServiceRegulated.sol` file. This function has a flaw that causes it to count investors twice when they change their country. This is because when an investor changes their country, the function correctly increases the investor counts for the new country, but fails to decrease the counts for the previous country. This can lead to incorrect calculation of investor limits and potential regulatory violations. A proof of concept is provided to demonstrate the issue, and a recommended solution is to modify the function to properly decrease the previous country's counts before increasing the new country's counts. The bug has been fixed and verified by the companies Securitize and Cyfrin. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

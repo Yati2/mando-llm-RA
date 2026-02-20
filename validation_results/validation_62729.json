@@ -1,0 +1,9 @@
+{
+  "id": "62729",
+  "title": "M-6: `EverclearBridge` does not pull tokens from the Rebalancer, causing all rebalancing operations to fail",
+  "summary": "\nSummary: \nA bug was found in the `EverclearBridge` contract where it does not transfer tokens from the Rebalancer contract before attempting to perform bridging operations. This results in a denial of service for cross-chain liquidity movement and can cause protocol operations to fail. The bug has been fixed by updating the contract to call `safeTransferFrom` and pull the required tokens from the Rebalancer before proceeding with bridging logic.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "64377",
+  "title": "Incorrect EIP-712 `TXTYPE_HASH` in `SecuritizeSwap`",
+  "summary": "\nThe bug report describes a mismatch between the expected message structure and the actual encoded parameters in the `SecuritizeSwap` contract. This violates EIP-712 standards and could cause compatibility issues with wallets and signing tools. The recommended mitigation is to correct the `TXTYPE_HASH` by removing the `memory` keyword and changing the type hash string to match the actual encoded parameters. The `SecuritizeSwap` contract has been removed as it was deprecated. The bug has been verified by Cyfrin.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the `memory` keyword should be removed, while the actual issue is related to the mismatch between the expected message structure and the encoded parameters, not the use of `memory`."
+  }
+}

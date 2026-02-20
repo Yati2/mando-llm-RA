@@ -1,0 +1,9 @@
+{
+  "id": "64379",
+  "title": "Changing investor country to the same country inflates investor count erroneously triggering max investor errors",
+  "summary": "\nThis bug report describes a problem where changing an investor's country to the same country will increase the investor count, triggering an error. This can happen when an admin uses the `RegistryService::updateInvestor` function to change an investor's properties, even if the country remains the same. A proof of concept was provided to demonstrate the issue and a recommended solution is to either revert or not make any changes if the country and previous country are the same. The bug has been fixed by the developers and verified by a third party.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "56951",
+  "title": "H-2: Incorrect implementation of `ERC4626ViewAdjustor`",
+  "summary": "\nThis bug report discusses an issue with the implementation of the `ERC4626ViewAdjustor` contract, which is used for converting between real and nominal values of a token. The code for the functions `toNominal` and `toReal` is reversed, causing users to deposit more than they should in certain situations. The root cause of the issue is in the `ERC4626ViewAdjustor` contract, and the fix is to reverse the implementation of these functions. The impact of this bug is a loss of funds for users. The protocol team has already fixed the issue in their code.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

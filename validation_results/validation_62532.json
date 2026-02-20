@@ -1,0 +1,9 @@
+{
+  "id": "62532",
+  "title": "[M-04] Yield withdrawal blocked by zero reward early return",
+  "summary": "\nThe bug report discusses an issue with the code in the Morpheus project on Github. The code is related to withdrawing yield, which is the profit earned from staking tokens. The problem is that the code does not properly update the yield amount when rewards end, causing it to become permanently stuck and inaccessible. This affects all users of the deposit pool and can result in a loss of profits. The report recommends implementing a solution to allow for withdrawal of yield even after rewards have ended. A proof of concept is also provided to demonstrate the issue. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the yield becomes permanently stuck and inaccessible; the code snippet simply returns early if rewards are zero, which does not imply a permanent blockage of yield withdrawal."
+  }
+}

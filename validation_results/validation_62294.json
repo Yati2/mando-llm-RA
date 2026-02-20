@@ -1,0 +1,9 @@
+{
+  "id": "62294",
+  "title": "getCurrentInterestRates() does not calculate the interests correctly",
+  "summary": "\nThe report discusses a bug in the code of `PiReserveInterestRateStrategy.sol` and `MiniPoolPiReserveInterestRateStrategy.sol`. The current borrow rate is calculated incorrectly, as it does not take into consideration the storage update for `_errI`. The recommendation is to make sure the current value of `_errI` is used in the derivation of `currentVariableBorrowRate` and to ensure that the `availableLiquidity` for mini pools follows the same formula used in `calculateInterestRates()`. This can be done by using a utility function that can be shared between `calculateInterestRates`, `getCurrentInterestRates`, and `getAvailableLiquidity()`. The bug has been acknowledged by Astera and Spearbit.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

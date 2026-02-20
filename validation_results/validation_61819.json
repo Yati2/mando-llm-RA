@@ -1,0 +1,9 @@
+{
+  "id": "61819",
+  "title": "[H-02] Hero Owner With Mythical Weapon Can Never Receive Weapon Shard Rewards",
+  "summary": "\nThe report identifies a vulnerability in the reward calculation for a game's weapon system. The issue occurs when calculating rewards for the rarest weapon type, Mythical weapons, as the function does not properly account for their rarity level. This results in players who own these premium weapons receiving zero weapon shards, which creates an unfair disadvantage for them. The team has acknowledged and fixed the issue by updating the constant used for weapon shard probability data to include data for Mythical weapons. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary mentions an issue with Mythical weapons not receiving rewards, but the code snippet does not provide any evidence of a specific flaw related to the rarity calculation for Mythical weapons."
+  }
+}

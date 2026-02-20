@@ -1,0 +1,9 @@
+{
+  "id": "62287",
+  "title": "Wrong oracle timeout value is used for Oracle.getAssetPrice",
+  "summary": "\nThis report discusses a bug in a code written in a programming language called Solidity. The code is used for a platform called Oracle, which helps in getting the price of different assets. The bug is in a function called `Oracle.getAssetPrice`, which uses a mapping of oracle addresses and timeouts per asset. This mapping is created when another function called `_setAssetsSources` is called. However, when calling `getAssetPrice`, different mapping entries are used for tranched tokens. This leads to invalidation of valid oracle data. To fix this, the recommendation is to use the underlying entry for `_assetToTimeout`. This bug has been fixed in a commit called `d73865d3`.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the mapping entries for tranched tokens are used, while the code shows that the wrong timeout value is used for the asset instead of the underlying asset."
+  }
+}

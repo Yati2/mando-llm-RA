@@ -1,0 +1,9 @@
+{
+  "id": "62485",
+  "title": "H-4: When users borrow directly from Morpho price of the collateral will not be accurate",
+  "summary": "\nThis bug report discusses an issue found by two users in the code of the Morpho lending platform. The issue occurs when a user requests a withdrawal and then borrows directly from Morpho, bypassing the lending router. In this situation, the shares will be priced based on their raw share value instead of the requested value, potentially leading to incorrect pricing and collateral valuation. The root cause of this issue is due to a variable not being set correctly when the user borrows directly. The impact of this bug is that the oracle will misprice the user's collateral, and the shares will not correspond to the yield tokens. A proof of concept is provided in the report, and a mitigation plan is yet to be determined. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet does not provide evidence of the specific issue regarding incorrect pricing and collateral valuation when borrowing directly from Morpho, as described in the summary."
+  }
+}

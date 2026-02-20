@@ -1,0 +1,9 @@
+{
+  "id": "62743",
+  "title": "[M-04] VRF Callback Scales with Player Count Can Lead to OOG and Stuck `WaitingVRF`",
+  "summary": "\nIn the game `Revolver`, there is a bug that causes the game to get stuck in a state called `WaitingVRF`, where no further progress can be made. This happens when there are thousands of active players in the game. The bug is caused by a function called `_checkSolePlayer()` which scans all active cells and all players in those cells. This scan uses up too much gas and the game reverts, resulting in the game being stuck. The bug can be fixed by removing the `_checkSolePlayer()` function from the callback and making some other changes to the code. The team has responded to the bug report and has fixed the issue. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

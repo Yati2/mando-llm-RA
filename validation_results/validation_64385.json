@@ -1,0 +1,9 @@
+{
+  "id": "64385",
+  "title": "`euRetailInvestorsCount` is susceptible to underflow when transferring tokens between retail and qualified investors of the same country on the EU region",
+  "summary": "\nThis bug report discusses an issue where the `euRetailInvestorsCount` is not properly incremented when a qualified EU investor is downgraded to a retail investor. This can cause inconsistencies in the system and also lead to underflow, which can be a security risk. A proof of concept is provided to demonstrate the issue and a possible solution is suggested. The report has been acknowledged by Securitize, who recommends implementing the suggested solution.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

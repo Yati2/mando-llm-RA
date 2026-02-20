@@ -1,0 +1,9 @@
+{
+  "id": "57870",
+  "title": "[H-03] Predictable Token Deployment Address Enables Liquidity Pool Exploit in `finalize()` in `DaosLive`",
+  "summary": "\nThis report describes a high-risk bug that allows an attacker to manipulate the deployment of a contract called `DaosToken` within the `DaosLive` contract. This predictability enables a front-running attack, which can result in a loss of protocol funds and a collapse in the token's value on Uniswap. The bug has been fixed by using a more secure method called `CREATE2` with a salt.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary mentions a front-running attack and a predictable deployment address, but the code snippet does not provide sufficient context to confirm these specific vulnerabilities."
+  }
+}

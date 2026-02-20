@@ -1,0 +1,9 @@
+{
+  "id": "62740",
+  "title": "[M-01] Join Signature Lacks Domain Separation Leading to Cross-Deployment/Chain Replay",
+  "summary": "\nThe report talks about a bug in the `joinGame()` function in `Revolver`. The signed payload does not contain all the necessary fields, making it vulnerable to cross-chain and cross-round replay attacks. This bug can be fixed by including more fields in the signed payload such as `block.chainid`, `address(this)`, `currentRoundId`, and `baseStake`. The team has acknowledged and fixed the bug.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the signed payload lacks necessary fields for cross-chain and cross-round replay attacks, while the code snippet shows that the current round ID is already included in the used key to prevent replay within the same round."
+  }
+}

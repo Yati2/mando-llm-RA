@@ -1,0 +1,9 @@
+{
+  "id": "63049",
+  "title": "M-3: USG peg assumption in on-chain safety checks incorrect liquidation/insolvency decisions when USG depegs",
+  "summary": "\nThe team has acknowledged an issue with the `MarketCore` code, which calculates health, LTV, and liquidation eligibility using collateral USD price but does not convert USG-denominated debt to USD. This means that if the USG token depegs, the safety checks can produce incorrect results and cause silent insolvency or unfair liquidations. The code does not properly compare the USD-valued collateral with the USG-denominated debt, assuming that 1 USG is equal to $1 on-chain. This can lead to operational risks and incorrect liquidations. The recommendation is to convert the debt to USD for safety checks.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

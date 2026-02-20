@@ -1,0 +1,9 @@
+{
+  "id": "63202",
+  "title": "M-23: The protocol doesnt support weird tokens like Tether Gold (that return false on every operation)",
+  "summary": "\nThis bug report is about an issue with the protocol's token transfers. The team has acknowledged the problem but will not fix it at this time. The issue was found by a user named anonymousjoe and it is caused by tokens like Tether gold, which always cause the transfer to fail. This means that these tokens are not supported by the protocol. There are no internal or external pre-conditions for this issue and there is no known attack path. The impact of this bug is that the protocol claims to support tokens that it actually cannot support. There is no proof of concept provided and no suggested mitigation for this issue.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary describes a failure to support certain tokens, but the code snippet does not indicate any specific handling or checks for tokens that return false on operations, which is a critical aspect of the vulnerability."
+  }
+}

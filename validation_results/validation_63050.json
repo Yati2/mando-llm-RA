@@ -1,0 +1,9 @@
+{
+  "id": "63050",
+  "title": "M-4: Lack of USDT support due to use of transfer",
+  "summary": "\nThe report discusses a bug found by a group of individuals in the USG Tangent Judging project. They found that the project's code allows any token to be used for zapping into output tokens, but any leftover tokens will be sent to the project's treasury. This causes an issue for tokens like USDT, as the use of the `transfer` function prevents its usage and results in a denial of service for users attempting to conduct market actions using USDT. The root cause is identified as the use of `transfer` and a suggested mitigation is to use `safeTransfer` from the SafeERC20 library. The location of the issue in the code is also provided.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the use of `transfer` prevents the usage of USDT, while the code snippet does not explicitly indicate a denial of service for USDT or any specific token."
+  }
+}

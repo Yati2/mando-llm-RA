@@ -1,0 +1,9 @@
+{
+  "id": "63199",
+  "title": "M-20: Makers can permanently lock JIT penalty revenue from the protocol treasury",
+  "summary": "\nThis bug report details an issue with the Ammplify protocol that could potentially cause a permanent lockup of revenue for the protocol treasury. The root cause of the issue is that the code does not properly handle penalties incurred by makers who withdraw liquidity shortly after adding it. These penalties are not tracked or routed to any recipient, resulting in them staying as idle tokens in the contract with no way to be claimed or transferred. This vulnerability was found by multiple individuals and has been confirmed by the protocol team. The impact of this issue is that the protocol treasury cannot claim these penalties, leading to funds getting stuck in the contract. The recommended mitigation for this issue is to route penalties to a designated treasury address at the time of application. The protocol team has already addressed this issue in a recent pull request. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary states that penalties are not tracked or routed to any recipient, but the code indicates that there is a treasury address for penalties, suggesting that they can be routed but may not be properly handled in certain conditions."
+  }
+}

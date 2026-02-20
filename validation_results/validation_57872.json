@@ -1,0 +1,9 @@
+{
+  "id": "57872",
+  "title": "[M-01] `DaoFactory` Inherits `PausableUpgradeable` but Does Not Implement any Pausable Functionalities",
+  "summary": "\nThe `DaosFactory` contract inherits from another contract called `PausableUpgradeable`, but it does not properly implement the pause functionality in the `create()` function. This means that the protocol owner cannot pause the creation of new `DaosLive.sol` instances in case of an emergency. To fix this, the `whenNotPaused` modifier should be added to the `create()` function. The team has responded and fixed the issue.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

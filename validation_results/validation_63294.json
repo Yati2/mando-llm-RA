@@ -1,0 +1,9 @@
+{
+  "id": "63294",
+  "title": "[M-04] Vault curator can force `operator.claimReward()` to revert with precision",
+  "summary": "\nThis report describes a bug where a vault curator can allocate a very small amount of stake to an operator, resulting in a reward amount of zero. This can cause the operator to be unable to claim their rewards and block other vaults associated with the operator from receiving their share of the rewards. To fix this, safeguards should be implemented to skip vaults with zero reward amounts and set a minimum stake threshold to avoid precision-based exploits.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the operator cannot claim rewards due to a zero reward amount, while the code snippet focuses on the calculation of reward distribution without explicitly indicating a mechanism that would block claiming rewards."
+  }
+}

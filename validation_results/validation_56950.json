@@ -1,0 +1,9 @@
+{
+  "id": "56950",
+  "title": "H-1: Incorrect handling of ERC4626 vaults with fees",
+  "summary": "\nThe bug report discusses an issue with the handling of ERC4626 vaults with fees in a multi-token pool. This bug allows users to avoid these fees and can be considered as stealing of tokens. The root cause is due to not transferring enough tokens to cover the fees, and the affected logic is in the ValueFacet and SwapFacet contracts. The bug can be exploited by depositing 100 value worth of tokens, but only 99 assets worth of shares are minted due to a 1% deposit fee. When the tokens are withdrawn, the 1 asset is not accounted for and is considered a loss. The impact of this bug is that users can avoid fees and the last users to withdraw their assets will suffer. The bug has been fixed by the protocol team in a recent PR. To mitigate this issue, the protocol should transfer more tokens from users to cover the fees when an ERC4626 vault with fees is used. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary describes a fee avoidance issue, but the code snippet does not explicitly show any logic related to fee handling or the exploitation of fees in ERC4626 vaults."
+  }
+}

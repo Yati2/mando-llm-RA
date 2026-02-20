@@ -1,0 +1,9 @@
+{
+  "id": "63290",
+  "title": "[H-01] Permissionless `sendCurrentOperatorsKeys()`",
+  "summary": "\nThe report states that there is a bug in the `Middleware.sendCurrentOperatorsKeys()` function which allows anyone to call it without permission. This function triggers the `Gateway.sendOperatorsData()` function on the Ethereum side of the bridge, which can cause problems such as griefing, resource exhaustion, or race conditions. Additionally, the report mentions that there is an edge case where the first `OperatorsKeys` submitted by a user within a block is included in an old era on the Tanssi chain, while the second or subsequent OperatorsKeys are included in the next era. This can result in an incorrect epoch and incorrect values for slashing and rewards. The report recommends restricting access to the function or introducing a rate-limiting mechanism or fee.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

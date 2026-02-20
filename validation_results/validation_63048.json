@@ -1,0 +1,9 @@
+{
+  "id": "63048",
+  "title": "M-2: Incorrect assumption that one (1) Pendle SY token equals one (1) Yield Token in oracle pricing",
+  "summary": "\nThe bug report is about an incorrect assumption in the `OraclePendlePT` contract that leads to systemic mispricing. The pricing formula used in the contract assumes that 1 Pendle Standard Yield (SY) token is always equal in value to 1 unit of the underlying Yield Token. However, in real Pendle markets, the SY token can deviate significantly from this 1:1 peg, causing the oracle to overstate the value of the PT token. This can result in liquidation reverts and financial loss for users, affecting the protocol's solvency. The root cause of this bug is a hardcoded pricing formula that does not consider the actual market price of the SY token. It is recommended to fix this issue to prevent any potential financial loss or insolvency for the protocol.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

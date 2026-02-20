@@ -1,0 +1,9 @@
+{
+  "id": "63704",
+  "title": "M-4: Integer division rounding down allows buyers to obtain free position tokens in JIT Minting",
+  "summary": "\nThis bug report is about a vulnerability found in a decentralized trading platform called the Index Fun Order Book. The issue was discovered by several security researchers and it allows buyers to receive position tokens and accumulate them without locking any collateral. This can be exploited through repeated small trades, allowing the attacker to claim full payouts from other participants' locked funds.\n\nThe vulnerability is caused by a function called `_executeJITMinting` which uses integer division to calculate the collateral amount. When the trade amount is small, the collateral amount rounds down to zero, but the buyer still receives tokens. This means that the buyer can receive tokens without actually contributing any collateral.\n\nTo exploit this vulnerability, attackers can repeatedly make small trades, accumulating position tokens without locking any collateral. Then, they can claim full payouts from other participants' locked funds.\n\nThe recommended solution is to implement a minimum trade size to prevent this type of attack. The protocol team has already fixed this issue in their code.\n\nOverall, this bug report highlights the importance of thorough testing and security audits in decentralized platforms to identify and fix vulnerabilities before they can be exploited. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

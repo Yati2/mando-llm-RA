@@ -1,0 +1,9 @@
+{
+  "id": "63291",
+  "title": "[M-01] Same reward can be claimed multiple times in certain cases",
+  "summary": "\nThe bug report talks about a problem in the `ODefaultOperatorRewards` contract that distributes rewards to operators based on their active stake. The issue is that the contract tracks claimed amounts using the recipient's address, which can change over time. This means that if an operator key is reassigned to a different address, the new operator could claim the same reward again. The report recommends tracking claimed rewards by the operator key instead of the recipient address to prevent this issue.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

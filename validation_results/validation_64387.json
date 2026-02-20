@@ -1,0 +1,9 @@
+{
+  "id": "64387",
+  "title": "`ComplianceServiceRegulated` applies double locking to investor transferable tokens leading to DoS of transfers",
+  "summary": "\nThe ComplianceServiceRegulated contract is causing a problem where investors are unable to transfer their tokens even though they should be allowed to. This is because the contract is double counting the amount of locked tokens, resulting in the investor's locked balance outweighing their transferable tokens. This issue also occurs with the LockManager contract, which will soon be removed. To fix this issue, the recommended solution is to query the token's balanceOfInvestor function instead of the InvestorLockManager's getTransferableTokens function. This will remove the double counting and use the investor's actual balance to determine their transferable tokens. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "57874",
+  "title": "[M-03] The `finalize()` Function DoS if Vesting Gets Scheduled Before Its Execution",
+  "summary": "\nThis bug report discusses a medium risk issue in the `DaosLive.sol` contract. The problem arises in the `setSchedules()` function, which allows the `daoManager` to set the vesting schedule. However, there is no check in place to ensure that this function can only be called after the `finalize()` function is called. This means that the function can be called before `finalize()`, causing the `finalize()` function to be permanently denied. This can lead to contributors' funds being locked, and the protocol entering a state of permanent denial of service. The recommendation is to not allow the owner to call `setSchedules()` before `finalize()` is called. The team has responded that the issue has been fixed.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that `setSchedules()` can be called before `finalize()`, while the code shows a check that prevents calling `setSchedules()` if the contract is not finalized."
+  }
+}

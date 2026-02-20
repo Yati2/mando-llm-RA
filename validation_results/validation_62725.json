@@ -1,0 +1,9 @@
+{
+  "id": "62725",
+  "title": "M-2: First depositor can brick market by forcing very large borrow rate",
+  "summary": "\nThis bug report discusses an issue with the borrow rate calculation in the `JumpRateModelV4` contract. The team has acknowledged the issue but will not be fixing it at this time. The report was found by multiple users. The issue arises when the utilization rate, which is calculated by dividing the total borrowed amount by the sum of the cash and borrowed amounts, becomes greater than 1e18. This can happen in certain scenarios, such as when the first depositor manipulates the market by borrowing and then repaying a large amount. This causes the borrow rate to become higher than the maximum allowed value, leading to the market becoming unresponsive. The recommendation is to limit the utilization rate to be no greater than 1e18 to prevent these issues. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "63703",
+  "title": "M-3: Emergency resolver targets wrong epoch",
+  "summary": "\nThis bug report discusses a problem found in the code for the Index Fun Order Book Contest Judging system. The bug was found by multiple users and involves the function \"emergencyResolveMarket\" in the MarketController contract. This function retrieves the current epoch from the market and sends it to the resolver. However, in time-based markets, the current epoch is calculated based on the elapsed time, which means that when a new window starts, the current epoch already points to the active trading period. This causes issues when the emergency function is called, as it resolves the wrong epoch and stores the merkle root under the wrong condition id. This means that users cannot claim winnings for that period and the next epoch is locked to the incorrect root. The recommendation is to add an explicit epoch parameter to the function and require the caller to choose which epoch to resolve. The protocol team has already fixed this issue in their code.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

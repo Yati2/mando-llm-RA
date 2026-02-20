@@ -1,0 +1,9 @@
+{
+  "id": "63197",
+  "title": "M-18: Shift-Overflow in getEquivalentLiq Inflates LP Shares",
+  "summary": "\nThe bug report discusses an issue found in the code of a project called Ammplify. The issue was discovered by users K42 and maigadoh and it relates to a function called `PoolLib.getEquivalentLiq` which calculates the liquidity-equivalent value of token balances. The problem is that the function uses left shifts before division, which can cause an overflow in the calculations and lead to incorrect values. This can result in unfair value distribution between users and cause losses for some. The root cause of the issue is the use of left shifts, which can cause the denominator to be truncated and lead to incorrect values. The report also explains the attack path that an attacker can take to exploit this issue and the impact it can have on the project and its users. The report suggests a mitigation solution, which involves replacing the left shifts with precise 512-bit math. The project team has already fixed this issue in their code.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

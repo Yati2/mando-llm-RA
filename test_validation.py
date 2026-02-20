@@ -2,15 +2,12 @@ import json
 import os
 from validate_summary import validate_summary_match
 
-# Create validation_results folder if it doesn't exist
 os.makedirs("validation_results", exist_ok=True)
 
-# Load findings from JSON
 with open("solodit_100_random.json", "r") as f:
     findings = json.load(f)
 
-# Test with first two findings
-test_findings = findings[:2]
+test_findings = findings
 
 for finding in test_findings:
     finding_id = finding["id"]
@@ -39,11 +36,11 @@ for finding in test_findings:
     
     # Display result
     if is_valid:
-        print("✅ VALID: Summary matches code vulnerability")
+        print("VALID: Summary matches code vulnerability")
     else:
-        print(f"❌ INVALID: {reason}")
+        print(f"INVALID: {reason}")
     
-    # Save to JSON file named after the finding ID in validation_results folder
+    # Save to JSON file 
     output_file = f"validation_results/validation_{finding_id}.json"
     with open(output_file, "w") as out:
         json.dump(result, out, indent=2)

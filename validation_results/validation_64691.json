@@ -1,0 +1,9 @@
+{
+  "id": "64691",
+  "title": "[M-01] Same Order ID Can Be Used Twice in Batch Payments",
+  "summary": "\nThis bug report discusses a medium risk bug in the `payOrdersBatch()` function in the PaymentRouter contract. This function validates all orders before updating any state, which allows for duplicate order IDs to bypass the check and potentially cause double payments and duplicate event emissions. The affected code can be found in the PaymentRouter.sol file. This bug can be exploited by creating a new file and writing an exploit using the MockUSDC contract. The impact of this bug is that it can lead to double payments and duplicate event emissions, potentially causing double fulfillment by off-chain systems. The team has provided a recommendation to fix the bug by updating the `processedOrders` state in the first loop to detect duplicates. Additionally, the report also mentions an informational risk regarding a redundant check in the `payOrdersBatch()` function that can cause operational DoS for batch payments. The team has provided a recommendation to remove this redundant check. Both bugs have been fixed by the team.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary mentions duplicate order IDs causing double payments, but the provided code snippet does not show any logic that validates or processes order IDs, making it unclear if the vulnerability exists as described."
+  }
+}

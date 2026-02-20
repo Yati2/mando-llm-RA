@@ -1,0 +1,9 @@
+{
+  "id": "62482",
+  "title": "H-1: Cross-contract reentrancy allows YIELD_TOKEN theft for the `GenericERC4626` `WithdrawalRequestManager` variant",
+  "summary": "\nThis bug report describes a vulnerability found in a smart contract code. The code is used for trading and allows users to withdraw their funds. The bug allows a malicious user to steal funds from the contract by using a combination of reentrancy and cross-contract reentrancy. This can be done by draining yield tokens from the contract and then burning them in exchange for deposit underlying staking token assets. The vulnerability is caused by the lack of proper validation and protection against reentrancy in the code. This can be exploited by a user who has spare yield tokens in the contract. The attack can be executed by front-running or proper timing before the user calls a specific function. The bug was found by a group of users and reported on GitHub. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

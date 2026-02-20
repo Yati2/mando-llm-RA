@@ -1,0 +1,9 @@
+{
+  "id": "62541",
+  "title": "[H-04] DoS risk from pending prize locking mechanism",
+  "summary": "\nA bug was found in the `SpinLottery` contract where users can temporarily prevent others from participating in the lottery. This is caused by a minimum guarantee mechanism that sets a conservative value for `pendingCount` if certain conditions are met. This can lead to a Denial of Service (DoS) situation when the total available prizes are insufficient. To fix this, the locking logic needs to be refined.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the issue is related to a minimum guarantee mechanism for `pendingCount`, while the code snippet indicates a check for available prizes that could lead to a revert, not a DoS situation."
+  }
+}

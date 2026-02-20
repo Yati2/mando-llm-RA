@@ -1,0 +1,9 @@
+{
+  "id": "57875",
+  "title": "[M-04] Premature `setGoalReached()` Call Disrupts Token Proportions and Refunds",
+  "summary": "\nThis bug report discusses a problem in the `DaosLive.sol` contract where the owner can prematurely call the `setGoalReached()` function before the fundraising goal is actually met. This can cause two issues: incorrect token distribution and locking of contributor funds. The bug can be fixed by implementing a validation check in the function or setting a minimum percentage of the fundraising goal that must be met before the function can be called. The team has responded that the bug has been fixed.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the `setGoalReached()` function can be called prematurely, while the code snippet includes a check that prevents this by requiring the fundraising goal to be met."
+  }
+}

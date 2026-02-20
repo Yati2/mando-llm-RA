@@ -1,0 +1,9 @@
+{
+  "id": "62540",
+  "title": "[H-03] Prize locking mechanism inconsistency with weight proportions",
+  "summary": "\nThis bug report is about a problem in the SpinLottery contract, where the locking of prizes does not follow the intended weight distribution. This can result in unfair outcomes and may also cause unexpected failures. The report recommends revising the lock mechanism to fix this issue.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet does not show a locking mechanism or any direct issues with weight proportions affecting prize distribution, making the summary inaccurate."
+  }
+}

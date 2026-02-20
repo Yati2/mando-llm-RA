@@ -1,0 +1,9 @@
+{
+  "id": "62730",
+  "title": "M-7: Incorrect transfer size validation after time window reset can lead to rebalancing DoS",
+  "summary": "\nThe bug report is about an issue found in the code of a decentralized finance (DeFi) project called Malda. The issue was discovered by a group of people and reported on GitHub. The bug can cause a disruption in the rebalancing operations of the project, which can affect the functionality of the protocol. It is caused by using old information in a specific function, leading to incorrect validation and potential denial of service. The team behind the project has fixed the issue and the fix has been reviewed and approved by the community.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

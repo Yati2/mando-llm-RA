@@ -1,0 +1,9 @@
+{
+  "id": "64381",
+  "title": "Historical token issuances become subject to new lock-up requirements when users change residency",
+  "summary": "\nThis bug report describes a flaw in two functions, `checkHoldUp` and `getComplianceTransferableTokens`, which are used to apply lock periods to token issuances. The bug causes the system to use the current lock period for all historical issuances, instead of using the lock period that was applicable at the time each token was issued. This can result in investors being unable to transfer tokens that should be unlocked, leading to liquidity issues and potential violations of securities regulations. A real-world scenario is provided to demonstrate the impact of the bug. The report recommends storing lock periods at the time of issuance and making changes to the `getComplianceTransferableTokens` function to use the stored lock periods. The bug has been acknowledged by Securitize.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

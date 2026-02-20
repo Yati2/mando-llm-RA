@@ -1,0 +1,9 @@
+{
+  "id": "62728",
+  "title": "M-5: Rebalancer can send to unallowed destination chains through EverclearBridge",
+  "summary": "\nThis bug report is about a vulnerability found in the `EverclearBridge` contract, which is used for transferring assets between different chains. The issue was discovered by a user named `cergyk` and reported on GitHub. \n\nThe problem is that the contract allows multiple destination chains to be provided, but only checks that one of them matches the intended destination. This means that if the transfer is fulfilled on a chain that is not supported by the `Malda` protocol, the funds will be lost. \n\nTo fix this, the recommendation is to check that the `destinations` array only contains one element and that it matches the intended destination. The `sherlock-admin2` team has already addressed this issue in a recent update. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the contract allows multiple destination chains without proper validation, while the code only checks if one of the provided destinations matches the intended destination, which does not imply funds will be lost if the check fails."
+  }
+}

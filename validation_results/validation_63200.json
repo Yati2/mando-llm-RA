@@ -1,0 +1,9 @@
+{
+  "id": "63200",
+  "title": "M-21: adjustMaker ignores recipient parameter when removing liquidity",
+  "summary": "\nThis bug report discusses an issue found in the adjustMaker function of the Ammplify protocol. The function takes a recipient parameter, which according to the NatSpec, should define who receives tokens when removing liquidity. However, the code always sends tokens to the msg.sender, even when removing liquidity, meaning the recipient parameter is not used at all. This creates a mismatch between the specification and implementation, which can cause accounting problems or failed integrations. The bug can be mitigated by updating the function to use the recipient parameter when removing liquidity. The protocol team has fixed this issue in a recent pull request.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet does not show any use of the recipient parameter, which is central to the summary's claim about the adjustMaker function's behavior."
+  }
+}

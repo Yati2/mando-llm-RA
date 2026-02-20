@@ -1,0 +1,9 @@
+{
+  "id": "62539",
+  "title": "[H-02] Insufficient restrictions in `instantOpenPacket()` risk DOS",
+  "summary": "\nThis bug report discusses an issue with the `initiateBurn` function in the `Packet.sol` contract. When a user calls this function with `BurnType` set to `INSTANT_OPEN_PACKET`, it will call the `instantOpenPacket` function on the `CardAllocationPool` contract. However, there is a problem with the `selectRandomCards` function within this contract. If there is only one bundle left for a specific `packetType`, and two users call `initiateBurn` at the same time, the first user will receive their cards as intended but the second user will encounter a revert error and not receive their cards. This is because the `selectRandomCards` function will pop the only value from `availableCardBundles` and cause the transaction to fail. The report recommends adding checks in the `instantOpenPacket` function to prevent more requests from being made than the available bundles for a specific `packetType`. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly attributes the issue to the `initiateBurn` function instead of directly addressing the potential reversion in the `selectRandomCards` function due to concurrent calls."
+  }
+}

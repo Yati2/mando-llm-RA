@@ -1,0 +1,9 @@
+{
+  "id": "62741",
+  "title": "[M-02] Inefficient Payout Distribution Due to Quadratic Gas Complexity",
+  "summary": "\nThe report describes a bug in the `_distributeProportionalPayouts()` function of the Revolver contract. This function uses nested for-loops with a linear search to find whether a player already exists in the `uniquePlayers` array. This causes quadratic gas complexity, which means that as the number of participants increases, the gas usage also increases disproportionately. This can lead to economic inefficiency and make the protocol vulnerable to denial-of-service attacks. The affected code can be found in the `Revolver.sol` file, specifically at line 826. The team recommends using libraries like iterable mapping and implementing more efficient algorithms like binary search or graph search. They also suggest limiting the number of users per cell. The team has fixed the issue.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly references the function `_distributeProportionalPayouts()` while the code snippet is from `_distributeWinnerPayouts()`, indicating a mismatch in the function being analyzed."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "62286",
+  "title": "WETH9 market cannot be deployed due to flawed _determineIfAToken logic",
+  "summary": "\nThis bug report discusses a problem with the code for deploying a minipool. The code checks if the underlying tokens are aTokens from the main lending pool, but it has a flaw that causes an error when using tokens with a fallback function, such as WETH9. This error consumes all remaining gas, causing the call to revert. A workaround is suggested, but it is not robust and may fail in certain situations. The recommended solution is to use a low-level call instead of a static call to avoid this issue. The bug has been fixed in the Astera and Spearbit commits. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly attributes the gas consumption issue to a fallback function when the code snippet indicates that the problem arises from the use of a try-catch block with insufficient gas for certain calls."
+  }
+}

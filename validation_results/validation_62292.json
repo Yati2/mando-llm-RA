@@ -1,0 +1,9 @@
+{
+  "id": "62292",
+  "title": "Reserves can be re-added",
+  "summary": "\nThis bug report is about a medium-risk issue in the LendingPool and MiniPool smart contracts. The problem occurs when a reserve for a specific asset and reserve type has already been added. Instead of reverting, the contracts continue and important parameters can be overwritten, causing the liquidity and borrow indices to be reset. The recommendation is to revert when `reserveAlreadyAdded` is true. The bug has been fixed in a recent commit and verified by the team.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

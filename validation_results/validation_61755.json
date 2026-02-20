@@ -1,0 +1,9 @@
+{
+  "id": "61755",
+  "title": "The Admin Can Take the Fees From the `FeeCollector`",
+  "summary": "\nThe client has marked a bug as \"Fixed\" in the file `vesting-contracts-v3/contracts/NativeTokenVestingManager.sol` with the code `c94e904607eaf9315963b9d98fe3eb312e1a5596`. The bug was reported because the `NativeTokenVestingManager.withdrawAdmin()` function, which is only supposed to be used by the admin, was incorrectly calculating the withdrawable amount. This could allow the admin to withdraw funds intended for the fee collector. The recommendation is to use a separate variable to track fees and restrict admin withdrawals to avoid this issue.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

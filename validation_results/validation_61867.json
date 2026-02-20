@@ -1,0 +1,9 @@
+{
+  "id": "61867",
+  "title": "Malicious Owner Can Mint to a Random Recipient",
+  "summary": "\nThe `mint` function in the `BitVMBridge` contract is used to create wrapped BTC on a different blockchain. However, there is a bug where the recipient's address is not being checked to make sure it is connected to the original BTC transaction. This means that someone could maliciously create wrapped BTC for any valid BTC transaction and send it to a random address. The bug has been fixed in a recent update, but the library used for this function has not been fully tested.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

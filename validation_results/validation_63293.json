@@ -1,0 +1,9 @@
+{
+  "id": "63293",
+  "title": "[M-03] Operator key change might cause loss of access to unclaimed rewards",
+  "summary": "\nThis report talks about a bug in the `claimRewards()` function of the `ODefaultOperatorRewards` contract. This function relies on `operatorByKey()` to find the operator's address, but this approach is not reliable when operator keys are updated. This can lead to operators losing access to their rewards if their key is deleted. The recommendation is to claim rewards before updating the key.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

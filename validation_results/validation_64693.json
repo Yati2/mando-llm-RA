@@ -1,0 +1,9 @@
+{
+  "id": "64693",
+  "title": "[M-02] Improper Error Handling of `onClaim` Callback in `_claim Function`",
+  "summary": "\nThis bug report discusses a vulnerability found in the `Distributor` contract's `_claim` function. The function uses a `try/catch` to handle failures in an external `onClaim` callback, but it is not properly implemented. This can lead to inconsistent and undesirable outcomes, such as a malicious or buggy `onClaim` function causing the entire claim batch to fail, or a reverting `onClaim` call being ignored. This poses risks to the security and functionality of the protocol.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

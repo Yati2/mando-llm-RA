@@ -1,0 +1,9 @@
+{
+  "id": "61818",
+  "title": "[H-01] Hero Owner Can Never Receive Bronze Tier Gacha Tokens",
+  "summary": "\nThis bug report is about a high-risk vulnerability in a contract's token distribution mechanism. The contract uses a data structure to store reward probabilities for different weapon rarities and token tiers. However, there is a mistake in the code that causes the lowest tier of tokens to never be distributed to players. This means that players who stake their heroes will never receive these tokens, regardless of their weapon rarity or zone selection. The recommended fix is to modify the code to include all four token tiers in the distribution loop. The team has responded and fixed the issue.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

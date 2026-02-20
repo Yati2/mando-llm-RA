@@ -1,0 +1,9 @@
+{
+  "id": "57869",
+  "title": "[H-02] In `finalize()`, the `_mintToDao` Amount of Tokens Are Permanently Stuck in `DaosLive`",
+  "summary": "\nThis bug report describes a high-risk issue in the `DaosLive::finalize()` function of the DaosLive contract. The issue is that there is a parameter called `_mintToDao()` that allows for the minting of additional tokens to the contract address. However, there is no way for the DAO manager to access or use these tokens, leading to a permanent loss of tokens. This affects all DAOs that use this parameter during `finalize()`. The recommended solution is to add a function to transfer tokens to the DAO manager or modify the `finalize()` function to mint directly to the DAO manager or any recipient address. The team has responded that the issue has been fixed.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the tokens are permanently lost; the code shows that tokens are minted to the contract address, but it does not confirm that they cannot be accessed or used by the DAO manager."
+  }
+}

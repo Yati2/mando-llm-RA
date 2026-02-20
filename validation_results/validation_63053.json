@@ -1,0 +1,9 @@
+{
+  "id": "63053",
+  "title": "M-7: Incorrect calls and Enforcements during Migration To a market.",
+  "summary": "\nThe bug report discusses an issue found by several users in a code repository. The problem involves a function called \"migration\" that allows users to move collateral and debt in a financial system. The function has a bug that causes it to unnecessarily check for certain conditions and call a specific function, even when it is not needed. This can lead to a denial of service for users, making it difficult for them to rescue their positions during critical moments. The bug can also increase the risk of liquidation and potential loss of user funds. To fix the issue, the code needs to be updated to only enforce the necessary conditions and function calls. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

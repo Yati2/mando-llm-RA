@@ -1,0 +1,9 @@
+{
+  "id": "64692",
+  "title": "[M-01] Minimum Reward-Per-Hour Validation Applied to Gross Instead of Net Amount",
+  "summary": "\nThis bug report discusses an issue found in the contract \"DistributionCreator.sol\" by multiple individuals. The function \"_createCampaign\" has a minimum reward-per-hour check that is applied to the campaign's gross amount before deducting protocol fees. However, the code does not re-validate the minimum threshold after fees are deducted, allowing campaigns to appear compliant on-chain while actually underpaying recipients. This can undermine participant incentives, violate expected protocol guarantees, and deceive users into accepting lower rewards. The root cause of this issue is that the code does not re-check the threshold against the fee-adjusted distribution amount. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

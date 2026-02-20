@@ -1,0 +1,9 @@
+{
+  "id": "61820",
+  "title": "[M-01] Contract Owner Cannot Recover Dead Heroes Due to Conflicting State Validation Logic",
+  "summary": "\nThe report describes a bug in the `Dragma` contract that affects the ability to recover dead heroes. This is caused by a logic error in the `unstakeDiedHeroes()` function, which fails to properly handle the state of dead heroes after they have gone through the unstaking process. This results in a situation where the recovery function always reverts, making it impossible to recover dead heroes. The team has been notified and has fixed the issue. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet does not show a logic error related to recovering dead heroes; it checks for dead heroes and reverts if they are dead, which is not indicative of a recovery issue."
+  }
+}

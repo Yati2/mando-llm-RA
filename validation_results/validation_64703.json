@@ -1,0 +1,9 @@
+{
+  "id": "64703",
+  "title": "[H-01] It Is Possible to Purchase In-Game Items Without Signing Up Which Results in Loss of Commission Fee for Referee",
+  "summary": "\nThis bug report highlights a problem with the RuyuiShop contract where users can purchase items and a battle pass without signing up first. This can lead to incorrect state updates, the referee not receiving their commission, and users bypassing the signup fee. The team has recommended implementing a check to ensure that users have signed up before making a purchase. This issue has been fixed by the team.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that users can purchase items without signing up, while the code snippet includes a requirement that checks if the user has signed up before allowing a purchase."
+  }
+}

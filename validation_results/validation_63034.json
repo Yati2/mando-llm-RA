@@ -1,0 +1,9 @@
+{
+  "id": "63034",
+  "title": "UNWIND_ROLE can extract pro\ufb01t via repeated allowedUnwindSlippagePercent arbitrage",
+  "summary": "\nThis report describes a bug in the code for the LoopedSonicVault smart contract. The bug allows someone with the \"UNWIND_ROLE\" to repeatedly exchange LST tokens for WETH and repay the protocol with a slightly lower amount, generating profit for themselves. This can be done by taking advantage of the allowedUnwindSlippagePercent and using an external market that sells LST tokens at a higher price. The report includes a proof of concept that demonstrates the exploit. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

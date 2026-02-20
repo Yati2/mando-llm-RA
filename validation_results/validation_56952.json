@@ -1,0 +1,9 @@
+{
+  "id": "56952",
+  "title": "H-3: Incorrect Netting Logic Leads to Excessive Withdrawal Amounts",
+  "summary": "\nThis bug report details a logical error in the netting calculation of a protocol that leads to incorrect withdrawal amounts. This occurs because the protocol fails to properly subtract deposit amounts when netting pending transactions. The root cause of this issue is that the protocol gets the real balance of a vertex and the actual balance of the closure based on its share balance in the vault. When the real balance is greater than the target real, there is a residual amount that needs to be withdrawn from the vault. However, during the commit function, the code sets the assetsToDeposit value to 0 and then attempts to subtract this value from assetsToWithdraw, resulting in no change to the withdrawal amount. This bug can have a significant impact on the protocol as it prevents the netting optimization from working properly and can result in the protocol paying fees on the full withdrawal amount rather than just the net amount. The protocol team has fixed this issue in the code and users are advised to update to the latest version to mitigate this bug.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

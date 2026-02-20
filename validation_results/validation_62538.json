@@ -1,0 +1,9 @@
+{
+  "id": "62538",
+  "title": "[H-01] Funds in subscription may be drained",
+  "summary": "\nThe bug report is about a problem in the SpinLottery game where users can participate in a spin activity to win a prize card. The issue is that some malicious users can exploit the system and consume all the balance in the subscription account by triggering multiple spins. This is possible because the cost for each spin is calculated using a formula that can be manipulated by increasing the value of a variable. The report recommends adding a minimum spin cost to prevent this exploitation.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly suggests that the spin cost can be manipulated by increasing a variable, while the code does not show any direct manipulation of the spin cost formula."
+  }
+}

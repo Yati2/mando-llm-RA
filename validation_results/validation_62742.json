@@ -1,0 +1,9 @@
+{
+  "id": "62742",
+  "title": "[M-03] Critical Variables Can Be Changed Mid-Round, Causing Severe Inconsistencies",
+  "summary": "\nThis bug report discusses an issue with the protocol that allows the admin to change certain variables in the middle of an active round. This inconsistency can lead to unfairness and disputes over payouts. The affected code is located in the Revolver.sol file and the recommendation is to restrict updates to these variables to only occur between rounds, or to introduce versioning or effective-after mechanisms. The team has responded by fixing the issue.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet does not show any mechanism that restricts changing variables mid-round, nor does it indicate any round-based logic that would lead to inconsistencies during an active round."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "62293",
+  "title": "Minipool owner can create unliquidatable loan, imposing bad debt on main lending pool",
+  "summary": "\nThis bug report discusses a medium risk severity issue in the MiniPoolConfigurator.sol code. The bug can be exploited if the owner of a mini pool is different from the main pool admin and the mini pool has some borrowing capacity from the main lending pool. The bug allows the mini pool owner to create an unliquidatable loan, causing bad debt for the main lending pool. This can be achieved by deactivating the reserve associated with the collateral of the loan. The report suggests a more robust check on the supply of the asset to prevent this issue. The bug has been fixed in the code and verified by Spearbit.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet does not show a mechanism for creating unliquidatable loans or deactivating reserves, which is central to the vulnerability described in the summary."
+  }
+}

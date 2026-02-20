@@ -1,0 +1,9 @@
+{
+  "id": "63056",
+  "title": "M-10: There is no way for the `admin` to sweep `rewards` lost due to precision",
+  "summary": "\nThis bug report discusses an issue found in the USG Tangent Judging contract. When rewards are being distributed, a process called Precision occurs which can cause tokens to become stuck in the contract with no way of being recovered. This is because the contract does not have a function to retrieve lost tokens due to precision. The attack path is described in detail, showing how the precision value can become larger for low decimal tokens like USDC, leading to a loss of funds. The code responsible for this issue is also highlighted. The impact of this bug is that the lost funds cannot be recovered. The recommendation is to add a function that can sweep stuck reward tokens from the contract. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

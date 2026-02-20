@@ -1,0 +1,9 @@
+{
+  "id": "62289",
+  "title": "Accounting available flow as available liquidity will lead to underestimate utilization",
+  "summary": "\nThe report describes a bug in the MiniPoolPiReserveInterestRateStrategy.sol file, which calculates the available liquidity for minipools. The bug causes the available flow from the main lending pool to be counted as available liquidity, leading to underestimation of minipool utilization. This results in incorrect liquidity rates and overcharging of borrowers. The report recommends removing the available flow from the calculation to fix the bug. The fix has been verified by Spearbit and Astera.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

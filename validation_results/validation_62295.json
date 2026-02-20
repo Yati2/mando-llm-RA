@@ -1,0 +1,9 @@
+{
+  "id": "62295",
+  "title": "variableBorrowIndex is only updated in _updateIndexes of the mini pool if currentLiquidityRate",
+  "summary": "\nThe bug report is about a medium risk issue in a code called MiniPoolReserveLogic.sol. The code has a nested \"if\" block that may cause problems. This means that one \"if\" statement is inside another \"if\" statement. This is not how it is supposed to be in the Aave v2 code. It is possible that this nested \"if\" block can cause issues due to rounding errors or other factors. The recommendation is to fix the code by separating the \"if\" blocks and updating the index separately. The bug has been fixed in a commit called 5ddd6f4b and has been verified by Spearbit.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly attributes the issue to nested \"if\" blocks causing rounding errors, while the code snippet shows that the problem is related to the update of `variableBorrowIndex` only occurring under certain conditions, not specifically about nesting."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "64383",
+  "title": "No way to revert `setInvestorLiquidateOnly`",
+  "summary": "\nThis bug report is about a function called `setInvestorLiquidateOnly` in a file called `InvestorLockManagerBase.sol`. The function has a problem that prevents the disabling of liquidate-only mode once it has been enabled. This means that once an investor is set to liquidate-only mode, it cannot be changed back. The recommended solution is to remove a line of code in the function, which will allow the state to be toggled on and off. This bug has been fixed by the company Securitize and verified by a company called Cyfrin. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the function cannot be disabled once enabled, while the code snippet shows that it prevents enabling liquidate-only mode if already enabled, not disabling it."
+  }
+}

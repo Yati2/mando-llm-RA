@@ -1,0 +1,9 @@
+{
+  "id": "63032",
+  "title": "Signed swap digest lacks a domain separator",
+  "summary": "\nThis bug report describes an issue with two smart contracts, called `UniswapV4KEMHook` and `PancakeSwapInfinityKEMHook`, that are used for trading on different blockchain networks. These contracts use a method of creating a unique code, called a \"digest\", to verify the authenticity of a trade. However, this method does not include important information such as the network and contract identity, which means that an attacker can use a valid signature from one network and use it on another network, causing unintended trades to occur. The recommendation is to add this missing information to the digest to prevent these attacks. Kyber and Spearbit have acknowledged the issue and are working on implementing a solution.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet does not include a domain separator, which is necessary to prevent signature replay attacks across different networks, but the summary does not explicitly mention this critical aspect."
+  }
+}

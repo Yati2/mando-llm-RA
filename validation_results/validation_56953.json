@@ -1,0 +1,9 @@
+{
+  "id": "56953",
+  "title": "H-4: Incorrect tax distribution when adding value single-sided",
+  "summary": "\nThis bug report discusses an issue with incorrect tax distribution when adding value single-sided to a closure. The bug was found by a group of individuals and is caused by the update of `valueStaked` before the distribution of tax earnings. This results in the new LP diluting the share of earnings meant for existing LPs, leading to unfair reward allocation. The bug can happen naturally when users add liquidity single-sided to any closure and has a high impact as it causes uneven distribution of fees and disincentivizes LPs from staking their value. A proof of concept is provided and the protocol team has fixed the issue in their code. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

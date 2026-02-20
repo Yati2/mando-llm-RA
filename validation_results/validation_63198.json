@@ -1,0 +1,9 @@
+{
+  "id": "63198",
+  "title": "M-19: `ViewFacet.queryAssetBalances` doesn't unclude uncollected uniswap fees for compounded maker position",
+  "summary": "\nThe bug report is about a code issue found in a project called 2025-09-ammplify-judging. The bug was discovered by a user named panprog and it affects the `ViewFacet.queryAssetBalances` function. The problem is that when calculating the earnings for a compounded maker, the code ignores uncollected uniswap fees. This results in incorrect earnings being reported, which can lead to further issues and potential loss of assets for users. The root cause of the bug is that the uncollected fees are not included in the calculations for compounded maker in the View walker. This bug can happen automatically and has a medium severity impact as it can result in incorrect return values and potential loss of assets. The suggested mitigation for this bug is to update the code to include the uncollected fees in the earnings calculation.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

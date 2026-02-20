@@ -1,0 +1,9 @@
+{
+  "id": "63033",
+  "title": "Quotes can be frontrun by replaying them through the router",
+  "summary": "\nThis bug report discusses a security issue in two hooks used in PancakeSwap and UniswapV4. These hooks accept swaps from the Kyber router, but do not verify the specific user making the swap. This means that anyone can copy the calldata and signature from a legitimate user and submit it first, causing the legitimate user's transaction to fail. The report recommends including the original caller of the router in the signature to prevent this issue. Both Kyber and Spearbit have acknowledged the issue.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

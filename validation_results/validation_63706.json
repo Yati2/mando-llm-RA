@@ -1,0 +1,9 @@
+{
+  "id": "63706",
+  "title": "M-6: Asymmetric fee structure allows market participants to get the same outcome for less fee",
+  "summary": "\nThis bug report discusses an issue with the trade fee structure in a market where users can trade on the outcome of an event. The problem occurs when matching orders using swapping, where the fee is taken from the collateral amount traded. This causes an asymmetry in the fee structure, where one trade path charges less fees than the other. This can be exploited by certain users, resulting in a loss of protocol revenue. The report suggests charging fees as a percentage of the outcome volume traded instead of the collateral amount traded to mitigate this issue. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

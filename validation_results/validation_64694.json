@@ -1,0 +1,9 @@
+{
+  "id": "64694",
+  "title": "[M-03] Multi-step campaign overrides are anchored to the original campaign, making later overrides impossible",
+  "summary": "\nThe bug reported is related to the `overrideCampaign` function in the `DistributionCreator.sol` contract. This function always compares a new override against the original campaign parameters stored in `campaignList`, instead of any previously stored override. This means that once a campaign has been overridden, any later override will still be constrained by the original start time and duration, instead of the latest override. This effectively makes the override mechanism \"single-use\" in many realistic scenarios. The report provides an example scenario where this bug can cause issues for creators and operators. To mitigate this bug, the recommended steps include changing the `overrideCampaign` function to validate against the \"effective campaign parameters\" and using the base for all validation instead of the original `campaignList` entry. This will align the on-chain constraints with how off-chain logic is expected to interpret campaigns. A detailed proof of concept is also provided for further understanding. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

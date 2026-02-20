@@ -1,0 +1,9 @@
+{
+  "id": "62288",
+  "title": "Usage of IERC20 methods would fail on some tokens due to lack of return of boolean value",
+  "summary": "\nThis bug report discusses a medium risk security issue in the MiniPool contract. The issue is related to the use of IERC20 methods, which can fail when used with certain tokens, such as USDT on the Ethereum mainnet. The report recommends using `safeTransfer` and `forceApprove` from the SafeERC20 library instead. This issue has been fixed in the Astera commit d58e3c76 and verified by Spearbit. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "63201",
+  "title": "M-22: Utilization Ratio Overflow Due to Incorrecte uint64 Cast",
+  "summary": "\nThe bug report discusses an issue found in the `chargeTrueFeeRate()` and `getLeftRightWeights()` functions in the `walkers/Fee.sol` file. These functions incorrectly assume that a certain calculation requires a `uint64` input, when in reality it accepts a `uint128`. This leads to utilization ratios being downcast from `uint256` to `uint64`, which can cause silent overflow. This bug can result in incorrect fees being charged to takers and misallocation of fees for makers. A proof of concept is provided to demonstrate the impact of the bug. The protocol team has fixed the issue in a recent pull request.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the issue is related to a `uint128` input when the code snippet shows a cast from `uint256` to `uint64`, which is the primary concern regarding overflow."
+  }
+}

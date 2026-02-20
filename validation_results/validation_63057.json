@@ -1,0 +1,9 @@
+{
+  "id": "63057",
+  "title": "M-11: WStable 1:1 exit path will break with cooldown-enabled ERC4626 vaults like sUSDe",
+  "summary": "\nThis bug report highlights an issue with the WStable contract that makes it incompatible with certain types of ERC4626 vaults. This can prevent users from withdrawing their funds as intended and violates the guidelines set by Sherlock. The root cause of the issue is that the contract attempts to call a function from the sUSDe contract, which has a modifier that reverts when a cooldown period is enabled. This results in user transactions failing and their funds being locked for 7+ days. This also breaks the core purpose of the WStable contract and violates the 1:1 withdrawal rule. The team has acknowledged the issue but will not be fixing it at this time. The recommended mitigation is to either replace sUSDe with a compatible vault or modify the WStable contract to handle cooldown periods. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

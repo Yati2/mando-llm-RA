@@ -1,0 +1,9 @@
+{
+  "id": "64899",
+  "title": "Proxy TON balance of the router can be stolen",
+  "summary": "\nThis bug report discusses a medium difficulty issue with the timing of a proxy TON jetton balance held by a router contract. The problem arises when a certain flag is set to true, allowing users to attach an arbitrary multihop payload during a swap. This can be exploited by malicious users to steal the proxy TON balance held by the router. The report suggests adding checks to ensure that the jetton wallet used in the swap is also the router's proxy TON wallet. It also recommends improving the test suite to cover potential adversarial scenarios and malformed data.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

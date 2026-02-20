@@ -1,0 +1,9 @@
+{
+  "id": "63052",
+  "title": "M-6: No slippage check for liquidators when they burn USG from their account without Swapping first.",
+  "summary": "\nThe bug report is about a problem that was found by a group of users in a software project. The problem is that when a liquidator liquidates a position, they may lose some of their funds because there is no check to make sure they don't lose more than they intended to. This happens when the liquidator uses their own funds instead of using a specific function called ZAP. The code does not enforce the maximum amount of USG (a type of token) to be burned from the liquidator's account when they sell some collateral. This means that the liquidator may receive less collateral than expected and lose some of their funds. The report suggests adding a check to make sure the liquidator can specify the maximum amount of USG to be burned for the collateral they are taking. This will prevent them from losing more funds than intended. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the issue is about liquidators losing funds due to a lack of a maximum amount check for USG burned, while the code primarily focuses on the liquidation process and does not explicitly mention a slippage check or the burning of USG."
+  }
+}

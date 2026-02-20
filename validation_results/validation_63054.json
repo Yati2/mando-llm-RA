@@ -1,0 +1,9 @@
+{
+  "id": "63054",
+  "title": "M-8: WStable Contract Invariant Break in isSaving=true Mode",
+  "summary": "\nThis bug report is about a contract called `WStable` that has an issue with its `isSaving=true` mode. This mode is used for share-based operations, but it breaks the 1:1 ratio between vault shares and WStable tokens. This means that when users deposit their shares, they end up permanently losing a portion of them due to the yield accrual in the underlying vault. This happens because of an asymmetric conversion logic between the `mint` and `burn` functions. This bug affects all users who use the `isSaving=true` mode and can result in a loss of user funds. A possible solution to this issue is to track shares instead of assets when using the `isSaving=true` mode.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary describes a loss of user funds due to an invariant break in the `isSaving=true` mode, but the code snippet does not provide sufficient evidence of this specific issue or the asymmetric conversion logic mentioned."
+  }
+}

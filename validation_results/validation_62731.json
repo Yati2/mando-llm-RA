@@ -1,0 +1,9 @@
+{
+  "id": "62731",
+  "title": "M-8: mErc20Host: It is not possible to permissionlessly call \"external\" endpoints when source chain is Eth mainnet, because l1Inclusion flag cannot be set to true",
+  "summary": "\nThis bug report discusses an issue with the `malda-lending` contracts where the `l1Inclusion` flag needs to be set in order to submit a proof permissionlessly. However, when trying to request a proof for data from the ETH mainnet with the flag set, it results in an error. This bug affects the ability to carry out external actions on the host in a permissionless manner when the source chain is ETH mainnet. The likelihood of this bug occurring is high and the recommendation is to handle the ETH mainnet case by returning a default value. The team has acknowledged the issue but will not fix it at this time due to the extensive fix required and other planned upgrades.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

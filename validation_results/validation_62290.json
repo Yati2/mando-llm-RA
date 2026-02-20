@@ -1,0 +1,9 @@
+{
+  "id": "62290",
+  "title": "Using the index for rewardTokens could result in incorrect reward token transfers inRewardForwarder",
+  "summary": "\nThe \"RewardForwarder\" contract has a bug that can result in incorrect distribution of reward tokens. This happens because the contract uses an index of reward tokens to transfer the tokens, but this index can be different between different contracts. This means that the tokens claimed in one contract may be transferred to a different token address in another contract, leading to incorrect distributions. To fix this bug, the contract should use the actual token address instead of the index when claiming and transferring the tokens. This bug has already been fixed by the developers and verified by two auditing companies. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the index can be different between contracts, while the code shows that the index is used consistently within the same contract context, leading to potential issues with incorrect token transfers based on the index used."
+  }
+}

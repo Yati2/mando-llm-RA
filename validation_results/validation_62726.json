@@ -1,0 +1,9 @@
+{
+  "id": "62726",
+  "title": "M-3: Migrator severily underestimates slippage by using underlying instead of shares",
+  "summary": "\nThis bug report is about a slippage protection issue in the `Migrator.sol` file of the Malda lending protocol. The issue was found by a group of users and is caused by a mistake in the code that computes the slippage value. The code uses underlying tokens instead of shares, resulting in a wrong slippage parameter by at least an order of magnitude. The recommendation is to divide the underlying amount by the exchange rate to get the correct slippage value. The protocol team has already fixed this issue in their latest update. ",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

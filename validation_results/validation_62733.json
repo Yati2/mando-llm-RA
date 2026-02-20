@@ -1,0 +1,9 @@
+{
+  "id": "62733",
+  "title": "M-10: Unenforced maxFee and ttl Parameters in sendMsg Function",
+  "summary": "\nThe bug report is about an issue found in the EverclearBridge contract, which is used by the rebalancer to send cross-chain intents. The contract does not enforce the required parameters for the netting pathway, specifically the `maxFee` and `ttl` parameters, which should be set to 0 according to the Everclear documentation. This can potentially lead to routing intents to the unsupported solver pathway, causing settlement failures or delays and even loss of funds. The root cause is that the `sendMsg` function lacks validation checks for these parameters before calling the `newIntent` function. The impact of this bug includes a potential denial of service attack, disruption of liquidity rebalancing, and increased costs for the protocol. A mitigation solution is proposed to enforce the validation of these parameters before calling the `newIntent` function.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary describes a lack of validation for `maxFee` and `ttl`, but the code snippet shows that these parameters are indeed enforced, contradicting the summary."
+  }
+}

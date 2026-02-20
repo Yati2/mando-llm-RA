@@ -1,0 +1,9 @@
+{
+  "id": "62291",
+  "title": "vars.availableLiquidity is not capped by the reserve's total managed assets",
+  "summary": "\nThis bug report discusses an issue related to the calculation of available liquidity in the MiniPoolDefaultReserveInterestRate and MiniPoolPiReserveInterestRateStrategy contracts. The formula used to calculate available liquidity assumes that there is enough liquidity in the lending pool reserve to cover the unused flow, which may not always be the case. To fix this, a cap should be placed on the available flow and the formula for calculating available liquidity should be modified. However, this issue has been resolved in a recent commit and is no longer applicable. ",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the issue has been resolved, while the code snippet still shows a potential lack of capping on available liquidity."
+  }
+}

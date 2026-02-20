@@ -1,0 +1,9 @@
+{
+  "id": "62724",
+  "title": "M-1: Wrong direction of rounding in redeem may lead to drain if exchange rate grows large",
+  "summary": "\nThe bug report describes an issue in the mToken contract, which is used for lending and borrowing money. The problem is caused by a mistake in the code that calculates the exchange rate and the amount of money to be redeemed. This mistake can lead to losses for users who deposit money into the contract. The report also explains how an attacker can exploit this mistake to increase the exchange rate and potentially steal money from the contract. The report recommends fixing the code to prevent this issue from happening. The team responsible for the contract has already fixed the issue in a recent update.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

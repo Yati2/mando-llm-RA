@@ -1,0 +1,9 @@
+{
+  "id": "62484",
+  "title": "H-3: `DineroWithdrawRequestManager` vulnerable to token overwithdrawal via batch ID overlap",
+  "summary": "\nThe bug report discusses an issue in the `DineroWithdrawRequestManager` contract where some users may profit while others may incur losses. This is due to the contract not properly tracking the balance of each `upxETH` token per withdrawal request, which can lead to overlaps and unintended withdrawals. This can be exploited by malicious users to withdraw more tokens than intended. To fix this, the contract needs to be updated to track balances per request. The protocol team has already fixed this issue in a recent pull request.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

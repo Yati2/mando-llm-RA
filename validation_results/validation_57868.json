@@ -1,0 +1,9 @@
+{
+  "id": "57868",
+  "title": "[H-01] Swapped Tokens During `finalize()` Permanently Stuck in `DaosLive` Due to Missing Withdrawal Mechanism",
+  "summary": "\nThis bug report highlights an issue where swapped tokens are permanently stuck in the `DaosLive.sol` contract due to the lack of a mechanism to retrieve them. This can have a high impact as the tokens become inaccessible forever. The recommendation is to implement a withdrawal or sweep function in the contract to retrieve these tokens, or to make the recipient parameter configurable. The team has fixed the issue.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}

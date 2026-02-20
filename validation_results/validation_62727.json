@@ -1,0 +1,9 @@
+{
+  "id": "62727",
+  "title": "M-4: Blacklist can be completely bypassed on outHere endpoint in mTokenGateway",
+  "summary": "\nThe bug report discusses a vulnerability in the mTokenGateway code, which is used for withdrawing funds on an extension chain. The endpoint that allows for this withdrawal is supposed to be protected by two modifiers, but they can be bypassed due to a flaw in the code. This means that a blacklisted user can still use the endpoint to withdraw their funds. The report recommends adding an additional check to prevent this from happening. The issue has already been fixed by the protocol team in a recent update.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary mentions that the blacklisted user can still use the endpoint to withdraw funds, but the code snippet includes a check to prevent this by requiring that the sender is not blacklisted."
+  }
+}

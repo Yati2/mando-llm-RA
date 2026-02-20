@@ -1,0 +1,9 @@
+{
+  "id": "57867",
+  "title": "[C-02] The `deadline` Parameter in UniswapV3 Swap Causes Sniping Functionality Failure in `finalize()` Function",
+  "summary": "\nThis report is about a critical risk bug found in the code of a token swapping function. The bug is caused by the missing `deadline` parameter in the initialization of `ExactInputSingleParams`. This results in the default value of `0` being used for `deadline`, which causes the transaction to fail due to an expired deadline. This bug affects the functionality of the token snipe feature and the `finalize()` function. The recommendation is to set the `deadline` parameter explicitly using a valid timestamp. The team has fixed the bug.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The summary incorrectly states that the `deadline` parameter is missing, while the code snippet shows that it has been added with `deadline: block.timestamp`."
+  }
+}
