@@ -35,21 +35,23 @@ total_pages = (total_results + page_size - 1) // page_size
 
 print(f"Total pages available: {total_pages}")
 
-# Step 2 — Hybrid sampling: pick 10 random pages, 10 findings each
+# Step 2 — Keep sampling until we have 100 findings with non-empty summaries
 
-collected = []
+filtered_findings = []
 visited_pages = set()
-
-pages_to_sample = 10
+target_count = 100
 findings_per_page = 10
 
-while len(visited_pages) < pages_to_sample:
+print(f"Downloading findings until we have {target_count} with non-empty summaries...")
+
+while len(filtered_findings) < target_count:
+    # Pick a random unvisited page
     random_page = random.randint(1, total_pages)
     if random_page in visited_pages:
         continue
 
     visited_pages.add(random_page)
-    print(f"Fetching page {random_page}")
+    print(f"Fetching page {random_page} (have {len(filtered_findings)}/{target_count} findings so far)")
 
     payload = {
         "page": random_page,
@@ -63,18 +65,21 @@ while len(visited_pages) < pages_to_sample:
     response.raise_for_status()
 
     findings = response.json()["findings"]
-
-    random.shuffle(findings)
-    collected.extend(findings)
+    
+    # Filter for non-empty summaries immediately
+    valid_findings = [f for f in findings if f.get("summary") and f["summary"].strip()]
+    filtered_findings.extend(valid_findings)
+    
+    print(f"  → Got {len(valid_findings)} findings with summaries from this page")
 
     # Small delay to respect rate limit (20/min)
-    # time.sleep(3.5)
+    time.sleep(3.5)
 
-print(f"Collected {len(collected)} findings.")
+# Take exactly 100 random findings if we have more
+if len(filtered_findings) > target_count:
+    filtered_findings = random.sample(filtered_findings, target_count)
 
-# Filter out findings with empty summary
-filtered_findings = [f for f in collected if f.get("summary") and f["summary"].strip()]
-print(f"Filtered to {len(filtered_findings)} findings with non-empty summaries.")
+print(f"Final count: {len(filtered_findings)} findings with non-empty summaries.")
 
 # Step 3 — Save full dataset JSON
 with open("solodit_100_random.json", "w") as f:
