@@ -1,0 +1,9 @@
+{
+  "id": "64915",
+  "title": "Over\ufb02ow in getMaxLiquidityForAmount0Precise can result in fund loss",
+  "summary": "\nThe bug report discusses an issue with the `getMaxLiquidityForAmount0Precise` function in a protocol. This function can overflow due to a multiplication performed before division, which can result in a loss of jettons for users trying to mint liquidity. The report suggests using a different approach to avoid overflows in the short term and implementing stateless fuzzing in the long term to test for similar risks in the protocol.",
+  "validation_result": {
+    "is_valid": false,
+    "reason": "The code snippet uses `int` types, which do not overflow in Solidity; the summary incorrectly suggests a vulnerability related to overflow in a multiplication operation."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "63292",
+  "title": "[M-02] Disabling collateral with `setCollateralToOracle()` blocks reward claims",
+  "summary": "\nThis bug report is about a problem that occurs when calling a specific function on a contract called \"Middleware\". This function, called \"setCollateralToOracle\", removes the associated oracle for a collateral, which is a type of asset used in the contract. This causes a critical issue where vaults, which are accounts that use this collateral, are unable to claim rewards. This is because the function that distributes rewards relies on the oracle address, and if it is removed, the function fails and prevents any rewards from being claimed. \n\nThe severity of this bug is high, meaning it has a significant impact on the functionality of the contract. However, the likelihood of it occurring is low. \n\nTo fix this issue, the report recommends disallowing the removal of the oracle address unless a mechanism is in place to safely handle rewards for historical vaults. They also suggest introducing a \"retired\" state for collaterals, which would allow historical rewards to be claimed while preventing new vaults from using the disabled collateral. Additionally, the report suggests caching oracle prices per epoch to avoid depending on live price feeds for historical calculations. \n\nThe report concludes by stating that this issue highlights a dependency on live oracle data even for historical calculations and recommends that any administrative or governance operations that affect the oracle address should ensure backward compatibility for reward calculations.",
+  "validation_result": {
+    "is_valid": true,
+    "reason": null
+  }
+}
